@@ -1,0 +1,13 @@
+# Ignore node modules
+node_modules/
+
+# Optional: ignore other common files
+.env
+.DS_Store
+*.log
+
+utils/db/Users.json
+utils/db/todos.json
+utils/db/todos2.json
+
+
