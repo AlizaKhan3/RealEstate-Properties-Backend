@@ -1,1 +1,50 @@
-[{"id":"4936d938-d833-4e64-89a3-9af02f685f01","title":"Adidas leather joggers","slug":"-abc","price":1200,"description":"A fast abc","category":{"id":"2ecb88bf-957f-4e56-adca-5eec5d2011e9","name":"Shoes"},"images":["img1.jpg","img2.jpg","img3.jpg"]},{"id":"2ba3fce3-ed5f-4187-8eba-4b88d004d915","title":"Adidas leather joggers","slug":"-abc","price":1200,"description":"A fast abc","category":{"id":"2ecb88bf-957f-4e56-adca-5eec5d2011e9","name":"Shoes"},"images":["img1.jpg","img2.jpg","img3.jpg"]},{"id":"9feecc0c-4d78-4e8e-8930-1fa3e451c005","title":"Outfitters leather joggers","slug":"-abc","price":1200,"description":"A fast abc","category":{"id":"2ecb88bf-957f-4e56-adca-5eec5d2011e9","name":"Shoes"},"images":["img1.jpg","img2.jpg","img3.jpg"]}]
+[
+    {
+        "id": "4936d938-d833-4e64-89a3-9af02f685f01",
+        "title": "Laptop ABC",
+        "slug": "laptop-abc",
+        "price": 1200,
+        "description": "A fast laptop",
+        "category": {
+            "id": "bd873b5b-708d-4fb9-827a-f822f645f677",
+            "name": "Electronics"
+        },
+        "images": [
+            "img111.jpg",
+            "img222.jpg",
+            "img333.jpg"
+        ]
+    },
+    {
+        "id": "2ba3fce3-ed5f-4187-8eba-4b88d004d915",
+        "title": "Adidas leather joggers",
+        "slug": "-abc",
+        "price": 1200,
+        "description": "A fast abc",
+        "category": {
+            "id": "2ecb88bf-957f-4e56-adca-5eec5d2011e9",
+            "name": "Shoes"
+        },
+        "images": [
+            "img1.jpg",
+            "img2.jpg",
+            "img3.jpg"
+        ]
+    },
+    {
+        "id": "9feecc0c-4d78-4e8e-8930-1fa3e451c005",
+        "title": "Outfitters leather joggers",
+        "slug": "-abc",
+        "price": 1200,
+        "description": "A fast abc",
+        "category": {
+            "id": "2ecb88bf-957f-4e56-adca-5eec5d2011e9",
+            "name": "Shoes"
+        },
+        "images": [
+            "img1.jpg",
+            "img2.jpg",
+            "img3.jpg"
+        ]
+    }
+]
