@@ -1,4 +1,4 @@
-import { displayProducts, addProduct, displayCategories, addCategory, deleteProduct } from "../utils/productsCRUD.js"
+import { displayProducts, addProduct, displayCategories, addCategory, deleteProduct, updateProduct } from "../utils/productsCRUD.js"
 import { v4 as uuidv4 } from 'uuid';
 
 export const getProductsController = async (req, res) => {
@@ -12,7 +12,7 @@ export const getCategoriessController = async (req, res) => {
 }
 
 export const postProductsController = async (req, res) => {
-    const { title, slug, price, description, categoryName, image1, image2, image3 } = req.body;
+    const { title, slug, price, description, categoryName, images } = req.body;
 
     const categories = await displayCategories();
     // check karo if category mentioned when adding product matches our categories or not.
@@ -37,7 +37,7 @@ export const postProductsController = async (req, res) => {
             name: category.name,
         },
         images: [
-            image1, image2, image3
+            images[0], images[1], images[2]
         ]
     }
 
@@ -52,9 +52,21 @@ export const deleteProductController = async (req, res) => {
 
     const deletedProd = await deleteProduct(id)
 
-    if(!deletedProd){
-        res.status(404).json({ success: false, message:"Product not found!" })
+    if (!deletedProd) {
+        res.status(404).json({ success: false, message: "Product not found!" })
     }
+    res.status(200).json({ success: true, message: "Product Deleted!" })
+}
 
-    res.status(200).json({ success: true, message:"Product Deleted!" })
+export const putProductController = async (req, res) => {
+    const id = req.params.id;
+    const payload = req.body;
+
+    const updatedProduct = await updateProduct(id, payload);
+
+    if (!updatedProduct) {
+        res.status(404).json({ success: false, message: "Product not found!" })
+    }
+    res.status(200).json({ success: true, message: "Product Updated" })
+
 }
