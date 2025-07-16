@@ -1,6 +1,8 @@
 import fs from 'fs'
 import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
+import { v4 as uuidv4 } from 'uuid';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -44,13 +46,57 @@ export const deleteProduct = async (id) => {
     const initialLength = products.length;
 
     const filterProd = products.filter((prod) => prod.id !== id)
-    
-    if(filterProd.length ===initialLength ){
+
+    if (filterProd.length === initialLength) {
         return false; //no deletion here.
     }
 
     const stringifyData = JSON.stringify(filterProd)
     await fs.promises.writeFile(filePathProd, stringifyData, 'utf-8')
 
+    return true;
+}
+
+export const updateProduct = async (id, payload) => {
+    const products = await displayProducts();
+    const categories = await displayCategories()
+    // index dhundna hei sbse pehle 
+    const prodIndex = products.findIndex((prod) => prod.id === id);
+
+    if (prodIndex === -1) {
+        return false;
+    }
+
+    let updatedProduct = { ...products[prodIndex] };
+
+    if (payload.categoryName) {
+        let category = categories.find((cat) => cat.name === payload.categoryName);
+
+        //ager category new hei phle se nahi toh uska new object banadou inside categories.
+        if (!category) {
+            category = {
+                id: uuidv4(),
+                name: payload.categoryName
+            }
+            categories.push(category);
+            await fs.promises.writeFile(filePathCat, JSON.stringify(categories, null, 2));
+        }
+
+        updatedProduct.category = {
+            id: category.id,
+            name: category.name
+        }
+    }
+
+
+    const { categoryName, ...otherPayload } = payload;
+    updatedProduct = { ...updatedProduct, ...otherPayload }
+
+    products[prodIndex] = updatedProduct;
+
+
+    const stringifyData = JSON.stringify(products)
+
+    await fs.promises.writeFile(filePathProd, stringifyData, 'utf-8')
     return true;
 }
