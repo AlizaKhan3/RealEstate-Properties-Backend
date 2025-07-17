@@ -100,3 +100,10 @@ export const updateProduct = async (id, payload) => {
     await fs.promises.writeFile(filePathProd, stringifyData, 'utf-8')
     return true;
 }
+
+
+export const findProductById = async (id) => {
+    const products = await displayProducts();
+    const findProduct = products.find((prod)=> prod.id === id)
+    return findProduct;
+}
