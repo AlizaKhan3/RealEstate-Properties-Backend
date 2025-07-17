@@ -1,4 +1,4 @@
-import { displayProducts, addProduct, displayCategories, addCategory, deleteProduct, updateProduct } from "../utils/productsCRUD.js"
+import { displayProducts, addProduct, displayCategories, addCategory, deleteProduct, updateProduct, findProductById } from "../utils/productsCRUD.js"
 import { v4 as uuidv4 } from 'uuid';
 
 export const getProductsController = async (req, res) => {
@@ -69,4 +69,13 @@ export const putProductController = async (req, res) => {
     }
     res.status(200).json({ success: true, message: "Product Updated" })
 
+}
+
+export const getProductsById = async (req, res) => {
+    const id = req.params.id
+    const product = await findProductById(id)
+    if (!product) {
+        return res.status(402).json({ message: "product not found!" });
+    }
+    res.status(200).json({ success: true, data: product })
 }
