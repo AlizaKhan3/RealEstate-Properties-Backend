@@ -12,7 +12,8 @@ export const getCategoriessController = async (req, res) => {
 }
 
 export const postProductsController = async (req, res) => {
-    const { title, slug, price, description, categoryName, images } = req.body;
+    // const { title, slug, price, description, categoryName, images } = req.body;
+    const { title, slug, price, description, categoryName, status, location, bedrooms, bathrooms, areaSqft, amenities, images } = req.body
 
     const categories = await displayCategories();
     // check karo if category mentioned when adding product matches our categories or not.
@@ -32,6 +33,12 @@ export const postProductsController = async (req, res) => {
         slug,
         price,
         description,
+        status,
+        location,
+        bedrooms,
+        bathrooms,
+        areaSqft,
+        amenities,
         category: {
             id: category.id,
             name: category.name,

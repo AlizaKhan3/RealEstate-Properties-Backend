@@ -1,1 +1,22 @@
-[{"id":"3b71425f-09d7-4917-8127-f3366dd480de","name":"Clothing"},{"id":"bd873b5b-708d-4fb9-827a-f822f645f677","name":"Electronics"},{"id":"4f996809-95c7-4395-938a-ef0e0b1a06df","name":"Crockery"},{"id":"2ecb88bf-957f-4e56-adca-5eec5d2011e9","name":"Shoes"}]
+[
+  {
+    "id": "e26a929a-56dd-4170-9cb2-742f97ee7d5d",
+    "name": "Apartment"
+  },
+  {
+    "id": "b18c77fe-19f0-42fe-a04c-6d890f8125d1",
+    "name": "Home"
+  },
+  {
+    "id": "695d1056-e769-477e-a873-aa0131ffff75",
+    "name": "Luxury"
+  },
+  {
+    "id": "ed98689b-55b9-4dc8-8fa4-897320d843e3",
+    "name": "Farm House"
+  },
+  {
+    "id": "f43c6b14-84ed-4f70-a3ad-10c6f9b3b483",
+    "name": "Plot"
+  }
+]
