@@ -3,11 +3,14 @@ import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { v4 as uuidv4 } from 'uuid';
 
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const filePathProd = path.join(__dirname, 'db/products.json')
 const filePathCat = path.join(__dirname, 'db/categories.json')
+//add images statically in images folder
+const filePathImages = path.join(__dirname, '../images');
 
 export const displayProducts = async () => {
     const products = await fs.promises.readFile(filePathProd, 'utf-8')
@@ -34,10 +37,9 @@ export const addCategory = async (newCat) => {
 
 export const addProduct = async (newProduct) => {
     const allProducts = await displayProducts();
-
     allProducts.push(newProduct)
     const stringifyData = JSON.stringify(allProducts);
-    await fs.promises.writeFile(filePathProd, stringifyData, 'utf-8');
+    await fs.promises.writeFile(filePathProd && filePathImages, stringifyData, 'utf-8');
 }
 
 export const deleteProduct = async (id) => {

@@ -49,3 +49,10 @@ export const roleMiddleware = (role) => {
         next()
     }
 }
+
+// export const imagesMiddleware = () =>{
+//     app.post('/photos/upload', upload.array('photos', 12), function (req, res, next) {
+//   // req.files is array of `photos` files
+//   // req.body will contain the text fields, if there were any
+// })
+// }

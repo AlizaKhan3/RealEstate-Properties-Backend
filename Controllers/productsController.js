@@ -13,8 +13,8 @@ export const getCategoriessController = async (req, res) => {
 
 export const postProductsController = async (req, res) => {
     // const { title, slug, price, description, categoryName, images } = req.body;
-    const { title, slug, price, description, categoryName, status, location, bedrooms, bathrooms, areaSqft, amenities, images } = req.body
-
+    const { title, slug, price, description, categoryName, status, location, bedrooms, bathrooms, areaSqft, amenities } = req.body
+    // console.log("ye rahin images--->", req.files)
     const categories = await displayCategories();
     // check karo if category mentioned when adding product matches our categories or not.
     let category = categories.find((category) => category.name.toLowerCase() === categoryName.toLowerCase())
@@ -27,6 +27,20 @@ export const postProductsController = async (req, res) => {
         res.status(200).json({ success: true, message: `New Category Added!: ${category.name}` })
     }
 
+    const getImagesByMulter = (ImgFile) => {
+        return req.files[ImgFile] && req.files[ImgFile][0] ? req.files[ImgFile][0].filename : null
+    }
+    const images = [
+        getImagesByMulter("image1") ? `/images/${getImagesByMulter("image1")}` : null,
+        getImagesByMulter("image2") ? `/images/${getImagesByMulter("image2")}` : null,
+        getImagesByMulter("image3") ? `/images/${getImagesByMulter("image3")}` : null
+    ]
+
+    // const images = [
+    //     req.files['image1'] ? req.files['image1'][0].filename : null,
+    //     req.files['image2'] ? req.files["image2"][0].filename : null,
+    //     req.files['image3'] ? req.files["image3"][0].filename : null
+    // ]
     const newProduct = {
         id: uuidv4(),
         title,
@@ -43,9 +57,10 @@ export const postProductsController = async (req, res) => {
             id: category.id,
             name: category.name,
         },
-        images: [
-            images[0], images[1], images[2]
-        ]
+        images: images //array of images getting through multer
+        // images: [
+        //     images[0], images[1], images[2]
+        // ]
     }
 
     await addProduct(newProduct);

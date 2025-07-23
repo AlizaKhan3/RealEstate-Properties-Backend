@@ -3,6 +3,13 @@ import dotenv from "dotenv"
 import appRoutes from "./Routes/appRoutes.js"
 import authRoutes from "./Routes/authRoutes.js"
 import cors from "cors"
+//for multer image
+import path, { dirname } from 'path'
+import { fileURLToPath } from "url"
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+///-----
 
 dotenv.config();
 
@@ -26,6 +33,10 @@ app.use('/properties', appRoutes)
 
 //auth route 
 app.use('/auth', authRoutes)
+
+
+app.use(express.static("public"));
+app.use('/images', express.static(path.join(__dirname, '../images')));
 
 app.listen(PORT, () => {
     console.log(`server running on port ${PORT}`)
