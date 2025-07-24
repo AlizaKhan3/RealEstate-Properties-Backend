@@ -22,7 +22,7 @@ export const displayProducts = async () => {
 export const displayCategories = async () => {
     const categories = await fs.promises.readFile(filePathCat, 'utf-8')
     const parseCategories = JSON.parse(categories);
-
+    
     return parseCategories;
 }
 

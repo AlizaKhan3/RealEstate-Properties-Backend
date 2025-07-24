@@ -1,1 +1,146 @@
-[{"id":"94807e72-881e-485c-b8c0-9c524140ef16","title":"400 sqft. Luxury House","slug":"luxury-4bhk-sea-view","price":8000000,"description":"Spacious 5 BHK apartment with modern amenities and breathtaking sea view.","location":"Gulistan e Johar, Karachi","bedrooms":3,"bathrooms":3,"areaSqft":1200,"amenities":["Parking","Security"],"category":{"id":"695d1056-e769-477e-a873-aa0131ffff75","name":"Luxury"},"images":["sea_view_front.jpg","living_room.jpg","bedroom.jpg"],"status":"Available"},{"0":null,"id":"02cdb57d-fd1c-43dd-b9b4-306e0686770b","title":"Al khizra heights","slug":"luxury-4bhk-sea-view","price":90000000,"description":"Spacious 5 BHK apartment with modern amenities and breathtaking sea view.","location":"Gulistan e Johar, Karachi","bedrooms":3,"bathrooms":3,"areaSqft":1200,"amenities":["Parking","Security"],"category":{"id":"e26a929a-56dd-4170-9cb2-742f97ee7d5d","name":"Apartment"},"images":["sea_view_front.jpg","living_room.jpg","bedroom.jpg"],"status":"Rent"},{"id":"396adb92-b173-47cd-a077-07139ea7dd68","title":"1500 sqft. Apartment","slug":"luxury-4bhk-sea-view","price":45000000,"description":"Spacious 5 BHK apartment with modern amenities and breathtaking sea view.","status":"Rent","location":"Gulistan e Johar, Karachi","bedrooms":3,"bathrooms":3,"areaSqft":1200,"amenities":["Parking","Security"],"category":{"id":"e26a929a-56dd-4170-9cb2-742f97ee7d5d","name":"Apartment"},"images":["sea_view_front.jpg","living_room.jpg","bedroom.jpg"]},{"id":"65510a40-a5a6-4d6b-9db8-b94a16661897","title":"1500 sqft. House","slug":"luxury-4bhk-sea-view","price":33000000,"description":"Spacious 5 BHK apartment with modern amenities and breathtaking sea view.","status":"Rent","location":"Gulistan e Johar, Karachi","bedrooms":3,"bathrooms":3,"areaSqft":1200,"amenities":["Pool","Gym","Security"],"category":{"id":"24334601-9842-49e1-8f8b-d9de5a184954","name":"House"},"images":["sea_view_front.jpg","living_room.jpg","bedroom.jpg"]},{"id":"3ef72988-0fcb-46c8-92d6-94cf2c53e4e8","title":"3bed Drawing Dining with Servant Quarter west open","slug":"3bed Drawing Dining with Servant Quarter west open Main Shaheed e Millat Road","price":"9000000","description":"3bed Drawing Dining with Servant Quarter west open Main Shaheed e Millat Road","status":"available","location":" Main Shaheed e Millat Road","bedrooms":"3","bathrooms":"5","amenities":"Stand by lift, Parking, Mosque","category":{"id":"e26a929a-56dd-4170-9cb2-742f97ee7d5d","name":"Apartment"},"images":[null,null,null]},{"id":"ceee0ac9-0a44-41ad-a6a1-4e148a3bce67","title":"Aziz Excellency","slug":"Apartment for Sale in Aziz Excellency, 5th floor","price":"32700000","description":"Apartment for Sale in Aziz Excellency, 5th floor","status":"available","location":"Jamshed Town, Karachi","bedrooms":"2","bathrooms":"2","amenities":"Car Parking, Security, Mosque, West Open","category":{"id":"e26a929a-56dd-4170-9cb2-742f97ee7d5d","name":"Apartment"},"images":[null,null,null]}]
+[
+    {
+        "id": "94807e72-881e-485c-b8c0-9c524140ef16",
+        "title": "400 sqft. Luxury House",
+        "slug": "luxury-4bhk-sea-view",
+        "price": 8000000,
+        "description": "Spacious 5 BHK apartment with modern amenities and breathtaking sea view.",
+        "location": "Gulistan e Johar, Karachi",
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "areaSqft": 1200,
+        "amenities": [
+            "Parking",
+            "Security"
+        ],
+        "category": {
+            "id": "695d1056-e769-477e-a873-aa0131ffff75",
+            "name": "Luxury"
+        },
+        "images": [
+            "sea_view_front.jpg",
+            "living_room.jpg",
+            "bedroom.jpg"
+        ],
+        "status": "Available"
+    },
+    {
+        "0": null,
+        "id": "02cdb57d-fd1c-43dd-b9b4-306e0686770b",
+        "title": "Al khizra heights",
+        "slug": "luxury-4bhk-sea-view",
+        "price": 90000000,
+        "description": "Spacious 5 BHK apartment with modern amenities and breathtaking sea view.",
+        "location": "Gulistan e Johar, Karachi",
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "areaSqft": 1200,
+        "amenities": [
+            "Parking",
+            "Security"
+        ],
+        "category": {
+            "id": "e26a929a-56dd-4170-9cb2-742f97ee7d5d",
+            "name": "Apartment"
+        },
+        "images": [
+            "sea_view_front.jpg",
+            "living_room.jpg",
+            "bedroom.jpg"
+        ],
+        "status": "Rent"
+    },
+    {
+        "id": "396adb92-b173-47cd-a077-07139ea7dd68",
+        "title": "1500 sqft. Apartment",
+        "slug": "luxury-4bhk-sea-view",
+        "price": 45000000,
+        "description": "Spacious 5 BHK apartment with modern amenities and breathtaking sea view.",
+        "status": "Rent",
+        "location": "Gulistan e Johar, Karachi",
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "areaSqft": 1200,
+        "amenities": [
+            "Parking",
+            "Security"
+        ],
+        "category": {
+            "id": "e26a929a-56dd-4170-9cb2-742f97ee7d5d",
+            "name": "Apartment"
+        },
+        "images": [
+            "sea_view_front.jpg",
+            "living_room.jpg",
+            "bedroom.jpg"
+        ]
+    },
+    {
+        "id": "65510a40-a5a6-4d6b-9db8-b94a16661897",
+        "title": "1500 sqft. House",
+        "slug": "luxury-4bhk-sea-view",
+        "price": 33000000,
+        "description": "Spacious 5 BHK apartment with modern amenities and breathtaking sea view.",
+        "status": "Rent",
+        "location": "Gulistan e Johar, Karachi",
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "areaSqft": 1200,
+        "amenities": [
+            "Pool",
+            "Gym",
+            "Security"
+        ],
+        "category": {
+            "id": "24334601-9842-49e1-8f8b-d9de5a184954",
+            "name": "House"
+        },
+        "images": [
+            "sea_view_front.jpg",
+            "living_room.jpg",
+            "bedroom.jpg"
+        ]
+    },
+    {
+        "id": "3ef72988-0fcb-46c8-92d6-94cf2c53e4e8",
+        "title": "3bed Drawing Dining with Servant Quarter west open",
+        "slug": "3bed Drawing Dining with Servant Quarter west open Main Shaheed e Millat Road",
+        "price": "9000000",
+        "description": "3bed Drawing Dining with Servant Quarter west open Main Shaheed e Millat Road",
+        "status": "available",
+        "location": " Main Shaheed e Millat Road",
+        "bedrooms": "3",
+        "bathrooms": "5",
+        "amenities": "Stand by lift, Parking, Mosque",
+        "category": {
+            "id": "e26a929a-56dd-4170-9cb2-742f97ee7d5d",
+            "name": "Apartment"
+        },
+        "images": [
+            null,
+            null,
+            null
+        ]
+    },
+    {
+        "id": "ceee0ac9-0a44-41ad-a6a1-4e148a3bce67",
+        "title": "Aziz Excellency",
+        "slug": "Apartment for Sale in Aziz Excellency, 5th floor",
+        "price": "32700000",
+        "description": "Apartment for Sale in Aziz Excellency, 5th floor",
+        "status": "available",
+        "location": "Jamshed Town, Karachi",
+        "bedrooms": "2",
+        "bathrooms": "2",
+        "amenities": "Car Parking, Security, Mosque, West Open",
+        "category": {
+            "id": "e26a929a-56dd-4170-9cb2-742f97ee7d5d",
+            "name": "Apartment"
+        },
+        "images": [
+            null,
+            null,
+            null
+        ]
+    }
+]
