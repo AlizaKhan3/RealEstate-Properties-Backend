@@ -7,8 +7,16 @@ export const getProductsController = async (req, res) => {
 }
 
 export const getCategoriessController = async (req, res) => {
-    const categories = await displayCategories()
-    res.status(200).json({ success: true, data: categories })
+    try {
+        const categories = await displayCategories();
+        res.status(200).json({ success: true, data: categories });
+    } catch (error) {
+        console.error("Error while getting categories:", error);
+        res.status(500).json({ success: false, error: error.message });
+    }
+    // console.log("Categories route hit");
+    // const categories = await displayCategories()
+    // res.status(200).json({ success: true, data: categories })
 }
 
 export const postProductsController = async (req, res) => {
