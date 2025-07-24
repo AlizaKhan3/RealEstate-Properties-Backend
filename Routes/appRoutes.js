@@ -8,9 +8,9 @@ const router = Router();
 
 // both user and admin routes.
 router.get('/', getProductsController)
+router.get('/categories', getCategoriessController)
 router.get('/:id', getProductsById) //get specific product by id.
 
-router.get('/categories', getCategoriessController)
 
 //only admin routes.
 // router.post('/add', authMiddleware, roleMiddleware("admin"), postProductsController)
