@@ -18,7 +18,7 @@
             "name": "Luxury"
         },
         "images": [
-            "sea_view_front.jpg",
+            "/images/d00ceef51756e994b8657fd58a4a4b6e",
             "living_room.jpg",
             "bedroom.jpg"
         ],
@@ -67,7 +67,7 @@
         ],
         "category": {
             "id": "e26a929a-56dd-4170-9cb2-742f97ee7d5d",
-            "name": "Apartment"
+            "name": "Farmhouse"
         },
         "images": [
             "sea_view_front.jpg",
@@ -117,7 +117,7 @@
             "name": "Apartment"
         },
         "images": [
-            null,
+            "/images/a5cfd122f1b967861c7a69701fa33a70",
             null,
             null
         ]
@@ -135,12 +135,34 @@
         "amenities": "Car Parking, Security, Mosque, West Open",
         "category": {
             "id": "e26a929a-56dd-4170-9cb2-742f97ee7d5d",
+            "name": "Luxury Villa"
+        },
+        "images": [
+            "/images/d00ceef51756e994b8657fd58a4a4b6e",
+            null,
+            null
+        ]
+    },
+    {
+        "id": "38bf2aaa-0cf1-4e7e-863b-5e4db2f23348",
+        "title": "Afnan Duplex 5 bed, drawing, dining",
+        "slug": "Afnan Duplex 5 bed, drawing, dining",
+        "price": "3400000",
+        "description": "Afnan Duplex 5 bed, drawing, dining",
+        "status": "available",
+        "location": "Gulistan-e-Johar, Block 6, Kamran Chowrangi",
+        "bedrooms": "3",
+        "bathrooms": "3",
+        "areaSqft": "1600",
+        "amenities": "Parking, Security, Gym",
+        "category": {
+            "id": "e26a929a-56dd-4170-9cb2-742f97ee7d5d",
             "name": "Apartment"
         },
         "images": [
-            null,
-            null,
-            null
+            "/images/7f6b6077fe3beba3b1cde793eef16425",
+            "/images/a5cfd122f1b967861c7a69701fa33a70",
+            "/images/d00ceef51756e994b8657fd58a4a4b6e"
         ]
     }
 ]

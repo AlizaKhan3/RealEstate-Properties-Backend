@@ -22,7 +22,7 @@ export const displayProducts = async () => {
 export const displayCategories = async () => {
     const categories = await fs.promises.readFile(filePathCat, 'utf-8')
     const parseCategories = JSON.parse(categories);
-    
+
     return parseCategories;
 }
 
@@ -39,7 +39,7 @@ export const addProduct = async (newProduct) => {
     const allProducts = await displayProducts();
     allProducts.push(newProduct)
     const stringifyData = JSON.stringify(allProducts);
-    await fs.promises.writeFile(filePathProd && filePathImages, stringifyData, 'utf-8');
+    await fs.promises.writeFile(filePathProd, stringifyData, 'utf-8');
 }
 
 export const deleteProduct = async (id) => {
@@ -106,6 +106,6 @@ export const updateProduct = async (id, payload) => {
 
 export const findProductById = async (id) => {
     const products = await displayProducts();
-    const findProduct = products.find((prod)=> prod.id === id)
+    const findProduct = products.find((prod) => prod.id === id)
     return findProduct;
 }

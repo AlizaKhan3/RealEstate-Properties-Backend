@@ -31,12 +31,72 @@ export const registerController = async (req, res) => {
 
         createUser(user);
 
-        return res.status(200).json({ success: true, message: "Registered Successfully!" })
+        const token = jwt.sign(user, process.env.JWT_SECRET_KEY, { expiresIn: '1d' })
+
+
+        return res.status(200).json({ success: true, message: "Registered Successfully!", token: token, data: user })
 
     } catch (error) {
         res.status(500).json({ success: false, message: error.message })
     }
 }
+
+
+// export const registerController = async (req, res) => {
+//     try {
+//         const { name, email, password } = req.body;
+
+//         if (!email || !name || !password) {
+//             console.log("❌ Missing field:", { email, name, password });
+//             return res.status(400).json({ success: false, message: "Please enter all fields" })
+//         }
+
+//         // If user already exists
+//         const userExist = await findUserByEmail(email)
+//         if (userExist) {
+//   console.log("❌ Duplicate email:", email);
+
+//             return res.status(400).json({ success: false, message: "Email already Registered, Please Login." })
+//         }
+
+//         const salt = bcrypt.genSaltSync(10);
+//         const hashedPassword = bcrypt.hashSync(password, salt);
+
+//         // default role = user
+//         const user = {
+//             id: uuidv4(),
+//             name,
+//             email: email.toLowerCase(),
+//             password: hashedPassword,
+//             role: "user"
+//         }
+
+//         createUser(user);
+
+//         // create payload for token
+//         const payload = {
+//             userId: user.id,
+//             userName: user.name,
+//             email: user.email,
+//             role: user.role
+//         };
+
+//         const token = jwt.sign(payload, process.env.JWT_SECRET_KEY, { expiresIn: '1d' });
+
+//         // don’t return password in response
+//         const { password: _, ...userWithoutPassword } = user;
+
+//         return res.status(200).json({
+//             success: true,
+//             message: "Registered Successfully!",
+//             token: token,
+//             data: userWithoutPassword
+//         });
+
+//     } catch (error) {
+//         res.status(500).json({ success: false, message: error.message })
+//     }
+// }
 
 
 export const loginController = async (req, res) => {
